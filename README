@@ -1,0 +1,12 @@
+The public chffr API. Get access to your data!
+
+Install requirements with
+# pip install -r requirements.txt
+
+Log in with
+# ./get_chffr_token.py
+This creates a token so you only have to log in once
+
+Demo API with
+# ./fetch_chffr_data.py
+
