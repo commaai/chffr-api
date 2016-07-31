@@ -5,7 +5,8 @@ Install requirements with
 
 Log in with
 # ./get_chffr_token.py
-This creates a token so you only have to log in once
+This creates a token so you only have to log in once.
+You can use this token from the web.
 
 Demo API with
 # ./fetch_chffr_data.py
