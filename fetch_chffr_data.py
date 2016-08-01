@@ -15,6 +15,7 @@ print endpoint("me")
 # fetch routes
 my_routes = endpoint("me/routes")['routes']
 for k in my_routes:
+  print my_routes[k]
   print k, my_routes[k]['len']
   route_url = my_routes[k]['url']
   print "secret route url:", route_url
@@ -24,12 +25,14 @@ for k in my_routes:
   print coords[0:10]
 
   # fetch first picture for route
-  PICTURE_INDEX = 1
+  PICTURE_INDEX = 34
+  pic_coords = coords[PICTURE_INDEX-1]
   pic = requests.get(route_url+"/sec%d.jpg" % PICTURE_INDEX).content
   print "got picture", len(pic)
-  with open("/tmp/chffr.jpg", "w") as f:
+  fn = "/tmp/chffr-%.4f-%.4f.jpg" % (pic_coords['lat'], pic_coords['lng'])
+  with open(fn, "w") as f:
     f.write(pic)
-  print "wrote to /tmp/chffr.jpg"
+  print "wrote to", fn
 
   # only one route for now
   break
