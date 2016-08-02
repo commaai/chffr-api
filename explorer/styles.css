@@ -1,0 +1,251 @@
+.rank{
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-size: 17px;
+  text-align: center;
+}
+
+.username {
+  max-width: 150px;
+}
+
+#un2 {
+  border-left: 1px solid black;
+}
+
+#menuLabels{
+  background-color: transparent;
+}
+tbody tr:nth-child(odd) {
+   background-color: #ccc;
+}
+
+tbody tr:nth-child(2) {
+   background-color: #EEE8AA !important;
+}
+
+#title_success{
+  margin-top: 10px;
+}
+.username{
+  padding: 10px;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-size: 17px;
+}
+
+.comma_points{
+  padding:10px 10px;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-size:17px;
+  text-align: center;
+}
+
+
+.usernameLabel, .rankLabel, .pointsLabel, .wpointsLabel{
+  text-align: center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: bold;
+  font-size: 15px;
+      padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pointsLabel{
+  color: goldenrod;
+  width: 120px;
+  display: block;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.wpointsLabel{
+  width: 120px;
+  display: block;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+
+.inner_table{
+  width: 300px;
+  margin-top:1%;
+}
+#prev{
+  float: left; 
+}
+
+#next{
+  float: right;
+}
+
+#bottomTimeline{
+  margin-top:30px;
+}
+
+#timelineRow{
+  margin-top:50px;
+
+}
+
+#timelineSlider{
+background: transparent;
+    height:1em;
+    border-radius: 50px;
+  margin-top: 0.6%;
+}
+.wrapper {
+
+  width:60%;
+  margin-top:150px;
+  margin-bottom:50px;
+}
+
+#timelineSlider > div {
+    margin-top:-50px;
+    text-align:center;
+    width:20px;
+    display:block;
+    text-size:10px;
+
+    z-index:3;
+    position: absolute;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  display:block;
+  margin-top:-8px;
+
+  height:30px !important;
+  background:white !important;
+
+  border: 3px solid #1e1e1e !important;
+}
+
+.ui-slider-horizontal {
+  height:0.3px;
+  border-radius:10px;
+  background:#000;
+  border: 0px;
+}
+
+#dateLabel, #speedLabel, #distanceLabel{
+  font-weight:bold;
+}
+
+#route_details{
+  margin-top: 13%;
+}
+
+.dropdown, .dropup {
+    position: absolute;
+}
+
+#sep{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#panel{
+  margin-top:-21px;
+}
+
+#mph{
+  margin-bottom: 25px;
+}
+
+#map{
+  height: 600px;
+  width: 100%;
+}
+
+#title{
+  text-align:center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  margin-bottom: -25px;
+  margin-top: -20px;
+}
+
+#column_two{
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  width:300px;
+}
+
+.content{
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    color: black;
+}
+
+.panel h3{
+  color: black;
+  text-align: center;
+  padding-left: 5.5%;
+  font-size:12px;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+
+}
+
+.panel h2{
+    margin-bottom: 2.5%;
+    margin-top: 0.5%;
+}
+
+ol, ul {
+margin-bottom: 0px;
+}
+
+body {
+  font-size:10px;
+  color: black;
+}
+
+.site-nav
+.rightside > a {
+  display:none;
+}
+
+h2{
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  text-align: center;
+  margin-top:0px;
+}
+
+.panel{
+  margin-bottom:0px;
+}
+
+#graph_row{
+  margin-top: 2%;
+}
+
+#video_pic{
+  width:100%;
+  margin-top:25px;
+}
+
+.routeline {
+  font-size: 18px;
+}
+.routeline td {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.rjust {
+  text-align: right;
+}
+
+#viewerPanelX {
+  font-size: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid black;
+}
+
+#viewerPanelButtonHolder {
+  text-align: right;
+  padding-right: 30px;
+}
+

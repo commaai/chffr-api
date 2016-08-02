@@ -1,0 +1,73 @@
+<html>
+<head>
+</head>
+<body>
+<br/><br/><br/>
+<!-- INCLUDE overall_header.html -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="token.js"></script>
+<script src="graphing.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<h2 id="title">driving explorer</h2>
+<br><br>
+<hr id="sep">
+<div class="panel" id="panel">
+   <div class="inner">
+      <span class="corners-top"><span></span></span>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+               <div id="map"></div>
+            </div>
+            <div class="col-md-6" id="routePanel">
+            </div>
+            <div class="col-md-6" id="viewerPanel" style="display:none">
+               <div id="viewerPanelButtonHolder"><button id="viewerPanelX" onclick="location.hash=''">close</button></div>
+               <img id ="video_pic" src="comma_default.png">
+               <div id="route_details" class="row">
+                  <div class="col-sm-4">
+                     <h2 id="dateLabel">time</h2>
+                     <h2 id="date">00:00:00</h2>
+                  </div>
+                  <div class="col-sm-4">
+                     <h2 id="speedLabel">speed</h2>
+                     <h2 id="speed">0 mph</h2>
+                  </div>
+                  <div class="col-sm-4">
+                     <h2 id="distanceLabel">distance</h2>
+                     <h2 id="distance">0.0/0.0mi</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="wrapper">
+            <div class="row" id="timelineRow" style="display: none">
+               <div class="col-md-2">
+                  <h2 id="startTime">start</h2>
+               </div>
+               <div class ="col-md-8">
+                  <div id="timelineSlider">
+                  </div>
+               </div>
+               <div class ="col-md-2">
+                  <h2 id="endTime">end</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu2lXe6b5E55W6iKajZbZ0jB5Im0Byk3M&callback=initMap"></script>
+   </div>
+   <span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<script>
+g_dongle_id = "{DONGLE_ID}";
+</script>
+<!-- INCLUDE overall_footer.html
+

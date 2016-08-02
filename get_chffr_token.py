@@ -34,7 +34,9 @@ if __name__ == '__main__':
   r = requests.get("https://api.comma.ai/v1/auth/?access_token="+credential.access_token)
   print "got", r.text
 
-  open("chffr_token","w").write(json.loads(r.text)['access_token'])
+  access_token = json.loads(r.text)['access_token']
+  open("chffr_token","w").write(access_token)
+  open("explorer/token.js","w").write('var token="'+access_token+'";')
   print "wrote chffr_token, you are logged in!"
 
 
