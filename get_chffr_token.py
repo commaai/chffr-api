@@ -21,23 +21,20 @@ if __name__ == '__main__':
 
   print ('Log into the Google Account you use to access your comma.ai chffr account'
          ' and go to the following URL: \n%s\n' % (authorize_url))
-  print 'After approving the token enter the verification code (if specified).'
-  code = raw_input('Code: ').strip()
+  print('After approving the token enter the verification code (if specified).')
+  code = raw_input('Code: ').strip() if sys.version_info.major == 2 else input('Code: ').strip()
 
   try:
     credential = flow.step2_exchange(code)
-  except client.FlowExchangeError, e:
-    print 'Authentication has failed: %s' % e
+  except client.FlowExchangeError as e:
+    print('Authentication has failed: %s' % e)
     sys.exit(1)
 
-  print "access token: ", credential.access_token
+  print("access token: ", credential.access_token)
   r = requests.get("https://api.comma.ai/v1/auth/?access_token="+credential.access_token)
-  print "got", r.text
+  print("got", r.text)
 
   access_token = json.loads(r.text)['access_token']
   open("chffr_token","w").write(access_token)
   open("explorer/token.js","w").write('var token="'+access_token+'";')
-  print "wrote chffr_token, you are logged in!"
-
-
-
+  print("wrote chffr_token, you are logged in!")
