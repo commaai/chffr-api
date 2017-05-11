@@ -1,0 +1,63 @@
+<html>
+<head>
+<script src="https://rawgit.com/kawanet/int64-buffer/master/dist/int64-buffer.min.js"></script>
+<script src="loadnpy.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="dygraph-combined.js"></script>
+<style>
+#partselect {
+  width: 200px;
+}
+#msgselect {
+  width: 300px;
+}
+.time {
+  width: 100px;
+  text-align: right;
+  padding-right: 10px;
+}
+.cbyte {
+  border: 1px black solid;
+}
+</style>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<tt>
+part: <select id="partselect" ng-model="selectedPart" ng-change="updateall()" ng-options="x for x in parts">
+</select><br/><br/>
+
+msg: <select id="msgselect" ng-model="selectedName" ng-change="update()" ng-options="x for x in names">
+</select>
+
+<br/><br/>
+viewing = {{selectedName}}
+
+<table>
+<tr ng-repeat="msg in tmsg" ng-style="(mm == msg[1]) ? {'background-color':'#ff8080'} : {}">
+<td class="time" ng-click="select(msg)">{{msg[0].toFixed(3)}}</td>
+<td ng-repeat="i in [0,1,2,3,4,5,6,7]" class="cbyte">
+<span style="background-color: #dddddd">
+{{h2(msg[1][i])}}
+</span>
+</td>
+</tr>
+</table>
+
+<table>
+<tr ng-repeat="i in [0,1,2,3,4,5,6,7]">
+<td ng-repeat="j in [7,6,5,4,3,2,1,0]" ng-click="bselect(i,j)" class="cbyte"
+  ng-style="((bstart <= (i*8 + (7-j)) && (i*8 + (7-j)) <= bend)) ? {'background-color':'#ff8080'} : {}" >
+{{gb(mm[i], j)}}
+</td>
+</tr>
+</table>
+
+<div id="graph"></div>
+
+</tt>
+
+<script src="canloader.js"></script>
+
